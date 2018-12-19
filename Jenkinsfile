@@ -15,7 +15,7 @@ pipeline {
                     scripts {
                         app = docker.build("jmlayn/train-schedule")
                         app.inside {
-                            sh 'echo $(curl localhost:808)'
+                            sh 'echo $(curl localhost:8080)'
                         }
                     }
                 }
